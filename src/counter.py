@@ -3,7 +3,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Tuple, Dict
 import pandas as pd
-from .cleaner import TextCleaner  # if not in a package yet: from cleaner import TextCleaner
+from cleaner import TextCleaner  # if not in a package yet: from cleaner import TextCleaner
 
 
 class WordCounter:
