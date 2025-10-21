@@ -19,8 +19,6 @@ All texts are stored in the `data/` folder in plain `.txt` format.
 
 ---
 
----
-
 ## Installation
 
 - Python 3.10–3.12
@@ -28,13 +26,79 @@ All texts are stored in the `data/` folder in plain `.txt` format.
 
 ```bash
 python -m venv .venv
+```
+
+```bash
 .venv\Scripts\activate
+```
+
+```bash
 pip install -r requirements.txt
+```
 
+### NLTK data (once)
 
+```python
 import nltk
-nltk.download("stopwords")
+```
 
+```python
+nltk.download("stopwords")
+```
+
+---
+
+## How to run
+
+This repository uses a flat `src/` layout, so run the script directly:
+
+```bash
 python src/main.py --input data --output output --top 20
-or 
+```
+
+
+ or with short flags
+
+
+```bash
 python src/main.py -i data -o output -t 20
+```
+
+---
+
+## Outputs
+
+CSV files are written to `output/`:
+
+- `frequencies_global.csv`
+- `top_global.csv`
+- `top_per_document.csv`
+
+> Note: `output/` is ignored in version control (only `.gitkeep` is tracked).  
+> Small preview images live in `examples/` (e.g., `examples/top_global.png`, `examples/top_per_document.png`).
+
+---
+
+## Reproducibility
+
+To reproduce the same results:
+
+```bash
+.venv\Scripts\activate
+```
+
+```bash
+pip install -r requirements.txt
+```
+
+```python
+import nltk
+```
+
+```python
+nltk.download("stopwords")
+```
+
+```bash
+python src/main.py -i data -o output -t 20
+```
