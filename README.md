@@ -18,3 +18,23 @@ The dataset consists of the **top 5 ebooks** from [Project Gutenberg](https://ww
 All texts are stored in the `data/` folder in plain `.txt` format.
 
 ---
+
+---
+
+## Installation
+
+- Python 3.10–3.12
+- Install dependencies:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+
+import nltk
+nltk.download("stopwords")
+
+python src/main.py --input data --output output --top 20
+or 
+python src/main.py -i data -o output -t 20
