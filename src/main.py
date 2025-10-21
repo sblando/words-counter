@@ -1,5 +1,5 @@
 import argparse
-from .counter import WordCounter
+from counter import WordCounter
 
 def main():
     # Command Line Interface: minimal, explicit flags
